@@ -39,7 +39,7 @@ export default function Item({ name, price, description, quantity: inicialQuanti
       <View>
         <View style={styles.value}>
           <Text style={styles.description}>Quantidade:</Text>
-          <CompleteInput styles={styles.quantity} value={quantity} acao={updateTotalQuantity} />
+          <CompleteInput styles={styles.quantity} value={quantity} action={updateTotalQuantity} />
         </View>
         <View style={styles.value}>
           <Text style={styles.description}>Total:</Text>
@@ -50,7 +50,7 @@ export default function Item({ name, price, description, quantity: inicialQuanti
           }</Text>
         </View>
       </View>
-      <Button value="Remover ao Carrinho" acao={() => { dispatch(actions.remover(index)) }} />
+      <Button value="Remover do Carrinho" margin action={() => { dispatch(actions.remove(index)) }} />
     </View>
     <View style={styles.divisor} />
   </>

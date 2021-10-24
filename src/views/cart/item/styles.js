@@ -6,17 +6,17 @@ export default StyleSheet.create({
     padding: 24
   },
   name: {
-    color: collors.laranja,
+    color: collors.golden,
     fontWeight: 'bold',
     fontSize: 16,
   },
   calc: {
-    color: collors.escuro,
+    color: collors.dark,
     fontSize: 14,
     marginVertical: 8,
   },
   price: {
-    color: collors.roxo,
+    color: collors.green,
     fontSize: 16,
     fontWeight: 'bold',
     textAlign: 'right',
@@ -24,7 +24,7 @@ export default StyleSheet.create({
   divisor: {
     marginHorizontal: 24,
     borderBottomWidth: 1,
-    borderBottomColor: collors.cinza,
+    borderBottomColor: collors.lightGreen,
   },
   cart: {
     paddingHorizontal: 24,
@@ -41,7 +41,7 @@ export default StyleSheet.create({
     flexWrap: 'wrap',
   },
   description: {
-    color: collors.escuro,
+    color: collors.dark,
     fontSize: 16,
     marginRight: 8,
   },

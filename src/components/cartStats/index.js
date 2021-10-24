@@ -8,7 +8,7 @@ import { actions } from "../../store/cart"
 
 export default function StatusCart({ total }) {
   const dispatch = useDispatch();
-  return <View style={styles.contenct}>
+  return <View style={styles.content}>
     <View style={styles.total}>
       <Text style={styles.description}>Total do Carrinho</Text>
       <Text style={styles.value}>
@@ -20,8 +20,8 @@ export default function StatusCart({ total }) {
       </Text>
     </View>
     <View style={styles.button}>
-      <Button value='Concluir Pedido' invertido acao={() => {
-        dispatch(actions.resetar());
+      <Button value='Concluir Pedido' inverted action={() => {
+        dispatch(actions.reset());
         alert("Pedido Concluido!")
       }} />
     </View>

@@ -7,12 +7,24 @@ import Item from "./item";
 
 
 
-const servicos = [
+const services = [
   {
     id: 1,
     name: "Banho",
     price: 79.9,
-    description: "NÃO DE BANHO NO SEU GATO!"
+    description: "BAnho simples!"
+  },
+  {
+    id: 1,
+    name: "Tosagem",
+    price: 140.25,
+    description: "Tosagem + banho!"
+  },
+  {
+    id: 1,
+    name: "Cortar unhas",
+    price: 50.25,
+    description: "Corte de unhas + relaxamento."
   },
   {
     id: 2,
@@ -29,11 +41,11 @@ const servicos = [
 
 ]
 
-export default function Servicos() {
+export default function Services() {
 
   return <>
     <FlatList
-      data={servicos}
+      data={services}
       renderItem={({ item }) => <Item {...item} />}
       keyExtractor={({ id }) => String(id)}
     />

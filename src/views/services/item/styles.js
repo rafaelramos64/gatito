@@ -5,8 +5,12 @@ export default StyleSheet.create({
   information: {
     padding: 24
   },
+  align: {
+    float: 'right',
+    color: collors.green,
+  },
   name: {
-    color: collors.orange,
+    color: collors.golden,
     fontWeight: 'bold',
     fontSize: 16,
   },
@@ -16,7 +20,7 @@ export default StyleSheet.create({
     marginVertical: 8,
   },
   price: {
-    color: collors.purple,
+    color: collors.green,
     fontSize: 16,
     fontWeight: 'bold',
     textAlign: 'right',
@@ -24,7 +28,7 @@ export default StyleSheet.create({
   divisor: {
     marginHorizontal: 24,
     borderBottomWidth: 1,
-    borderBottomColor: collors.grey,
+    borderBottomColor: collors.lightGreen,
   },
   cart: {
     paddingHorizontal: 24,

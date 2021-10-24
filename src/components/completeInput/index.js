@@ -1,6 +1,7 @@
 import React from "react"
 import { TextInput,TouchableOpacity, Text , StyleSheet} from "react-native"
 import defaultStyles from './styles'
+import { collors } from "../../styles"
 
 export default function completeInput({ value, styles, action }) {
   const update = (newValue, returnAction) => {
@@ -10,7 +11,7 @@ export default function completeInput({ value, styles, action }) {
   return <>
   <TouchableOpacity>
     <Text
-    style={[stylesButton.button, stylesButton.text]}
+    style={[stylesButton.buttonMinus, stylesButton.text]}
     onPress={() => update(--value, action)}
     >-</Text>
   </TouchableOpacity>
@@ -30,15 +31,24 @@ const stylesButton = StyleSheet.create({
     justifyContent: 'center',
     paddingVertical: 5,
     paddingHorizontal: 10,
-    // borderRadius: 4,
-    elevation: 3,
-    backgroundColor: '#A050BE',
+    borderRadius: 4,
+    elevation: 6,
+    backgroundColor: collors.lightGreen,
+  },
+  buttonMinus: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingVertical: 5,
+    paddingHorizontal: 12,
+    borderRadius: 4,
+    elevation: 6,
+    backgroundColor: collors.danger2,
   },
   text: {
     fontSize: 16,
     lineHeight: 21,
     fontWeight: 'bold',
     letterSpacing: 0.25,
-    color: 'white',
+    color: collors.light,
   },
 });

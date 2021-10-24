@@ -3,10 +3,12 @@ import { collors } from '../../styles';
 
 export default StyleSheet.create({
   campo: {
-    height: 31,
-    paddingTop: 5,
-    borderWidth: 2,
-    borderColor: '#A050BE',
-    textAlign: 'center'
+    height: 36,
+    paddingBottom: 0,
+    borderWidth: 1,
+    borderColor: collors.light,
+    textAlign: 'center',
+    color: collors.golden,
+    fontSize: 23,
   }
 });

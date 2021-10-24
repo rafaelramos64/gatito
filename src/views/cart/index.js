@@ -22,7 +22,7 @@ export default function cart() {
   } else {
     return <>
       <CartStats total={total} />
-      <Text style={{ fontSize: 22 }} if={total < 1}>Carrinho está vazio. Vamos gastar um pouquinho!!</Text>
+      <Text style={{ fontSize: 22, marginLeft: 15, color: '#887725' }} if={total < 1}>Carrinho está vazio. Vamos gastar um pouquinho!!</Text>
     </>
   }
 }

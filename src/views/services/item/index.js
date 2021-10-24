@@ -31,24 +31,26 @@ export default function Item({ id, name, price, description }) {
 
   const addOnCart = () => {
     dispatch(actions.add({ id, name, price, description, quantity }))
+    alert("Adicionado ao carrinho!")
   }
 
   return <>
     <TouchableOpacity style={styles.information} onPress={invertExpand}>
-      <Text style={styles.name}>{name}</Text>
+      <Text style={styles.name}>{name}
+        <Text style={styles.price, styles.align}>{
+          Intl.NumberFormat('pt-BR', {
+            style: 'currency', currency: 'BRL'
+          }).format(price)
+        }</Text>
+      </Text>
       <Text style={styles.description}>{description}</Text>
-      <Text style={styles.price}>{
-        Intl.NumberFormat('pt-BR', {
-          style: 'currency', currency: 'BRL'
-        }).format(price)
-      }</Text>
     </TouchableOpacity>
 
     {expand && <View style={styles.cart}>
       <View>
         <View style={styles.value}>
           <Text style={styles.description}>Quantidade:</Text>
-          <CompleteInput styles={styles.quantity} value={quantity} acao={updateTotalQuantity} />
+          <CompleteInput styles={styles.quantity} value={quantity} action={updateTotalQuantity} />
         </View>
         <View style={styles.value}>
           <Text style={styles.description}>Total:</Text>
@@ -59,7 +61,7 @@ export default function Item({ id, name, price, description }) {
           }</Text>
         </View>
       </View>
-      <Button value="Adicionar ao Carrinho" acao={addOnCart} />
+      <Button value="Adicionar ao Carrinho" inverted margin action={addOnCart} />
     </View>}
     <View style={styles.divisor} />
   </>

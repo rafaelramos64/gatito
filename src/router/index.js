@@ -38,17 +38,18 @@ export default function Routes() {
         keyboardHidesTabBar: true
       }}
       screenOptions={{
-        tabBarActiveTintColor: collors.purple,
-        tabBarInactiveTintColor: collors.white,
-        tabBarActiveBackgroundColor: collors.purple,
-        tabBarInactiveBackgroundColor: collors.orange,
+        tabBarActiveTintColor: collors.lightGreen2,
+        tabBarInactiveTintColor: collors.dark,
+        tabBarActiveBackgroundColor: collors.lightGreen2,
+        tabBarInactiveBackgroundColor: collors.light,
         tabBarLabelStyle: {
           fontWeight: 'bold',
           fontSize: 16,
           textAlignVertical: 'center',
           height: '95%',
           width: '105%',
-          backgroundColor: collors.orange,
+          backgroundColor: collors.light,
+          paddingTop: 20, 
         },
         tabBarStyle: {
           width: '100%',
@@ -61,8 +62,8 @@ export default function Routes() {
         keyBoarHidesTabBar: true,
       }}
     >
-      <Tab.Screen name="Services" component={Services} />
-      <Tab.Screen name="Cart" component={Cart} />
+      <Tab.Screen name="Serviços" component={Services} />
+      <Tab.Screen name="Carrinho" component={Cart} />
     </Tab.Navigator>
   </NavigationContainer>
 }

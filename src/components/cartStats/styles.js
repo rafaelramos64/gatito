@@ -15,14 +15,14 @@ export default StyleSheet.create({
   },
   description: {
     fontSize: 16,
-    color: collors.white,
+    color: collors.green,
     fontWeight: 'bold',
   },
   value: {
     fontSize: 18,
     fontWeight: 'bold',
     marginVertical: 6,
-    color: collors.orange,
+    color: collors.golden,
   },
   button: {
     flexGrow: 1,
